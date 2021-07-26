@@ -4,8 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preconfigure": "node ./bin/pre-configure.js",
+    "preinstall": "yarn preconfigure",
+    "prepublish": "yarn build && yarn preconfigure",
+    "prebuild": "rm -rf ./dist",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
-    "test:ci": "yarn test --coverage"
+    "test:ci": "yarn test --coverage",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "echo tslint -p tsconfig.json",
+    "prepublishOnly": "npm run test:deploy && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "update:npm": "npm run version && npm publish"
   },
   "repository": {
     "type": "git",
