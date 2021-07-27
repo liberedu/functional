@@ -10,3 +10,4 @@ tslint.json
 jest.config.ts
 yarn.lock
 yarn-error.log
+bin

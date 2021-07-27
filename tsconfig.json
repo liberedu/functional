@@ -15,5 +15,5 @@
 		"rootDir": "./src",
 		"paths": {}
 	},
-	"exclude": ["__tests__", "jest.config.ts", "dist"]
+	"exclude": ["__tests__", "jest.config.ts", "dist", "**/*.spec.*"]
 }
