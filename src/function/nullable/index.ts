@@ -1,4 +1,4 @@
-interface INullableRet<Arg extends any, Ret extends any> {
+export interface INullableRet<Arg extends any, Ret extends any> {
 	(a: Arg): Ret;
 	(a: Arg | undefined): Ret | null;
 	(a?: undefined): null;
