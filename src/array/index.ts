@@ -1,3 +1,3 @@
-import * as Array from './exports';
+import * as _Array from './exports';
 
-export { Array };
+export { _Array as Array };

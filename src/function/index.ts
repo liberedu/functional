@@ -1,3 +1,3 @@
-import * as Func from './exports';
+import * as _Function from './exports';
 
-export { Func };
+export { _Function as Func };

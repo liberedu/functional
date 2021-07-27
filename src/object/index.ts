@@ -1,3 +1,3 @@
-import * as Object from './exports';
+import * as _Object from './exports';
 
-export { Object };
+export { _Object as Object };
