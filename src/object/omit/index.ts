@@ -1,4 +1,4 @@
-import R from 'ramda';
+import { omit as R_omit } from 'ramda';
 
 /**
  * Picks an array of properties from an object.
@@ -11,5 +11,5 @@ import R from 'ramda';
  * @return {Pick<T, Extract<keyof T, K>>} a new object without the omitted properties from the source object.
  */
 export function omit<T, K extends keyof T>(obj: T, ...names: readonly K[]): Omit<T, Extract<keyof T, K>> {
-	return R.omit(names as any[], obj) as any;
+	return R_omit(names as any[], obj) as any;
 }

@@ -1,4 +1,4 @@
-import R from 'ramda';
+import { path as R_path } from 'ramda';
 
 type K<OBJECT extends any> = keyof OBJECT;
 
@@ -46,5 +46,5 @@ export const path: Path = <T>(obj: T, ...args: any[]) => {
 		return;
 	}
 	const keys = Array.from(args).slice(1);
-	return R.path<T>(keys, obj);
+	return R_path<T>(keys, obj);
 };
