@@ -6,6 +6,6 @@ export * from './merge-prepend';
 export * from './omit';
 export * from './path';
 export * from './pick';
-export * from './prepend';
+export { prepend } from './prepend';
 export * from './split';
 export * from './values';

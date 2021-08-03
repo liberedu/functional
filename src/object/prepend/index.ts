@@ -1,5 +1,5 @@
 type Str<S> = Extract<S, string>;
-type Preprend<S, Key extends string, JoinKey extends string> = {
+export type Prepend<S, Key extends string, JoinKey extends string> = {
 	[K in keyof S as `${Key}${JoinKey}${Str<keyof S>}`]: S[K];
 };
 
@@ -7,7 +7,7 @@ const prependFn = <Src extends { [K in string]: any }, K extends string, JoinKey
 	key: K,
 	src: Src,
 	joinKey?: JoinKey,
-): Preprend<Src, K, JoinKey> => {
+): Prepend<Src, K, JoinKey> => {
 	const prepended: any = {};
 	Object.keys(src).forEach((innerKey) => {
 		const newKey = [key, innerKey].join(joinKey || '.');
