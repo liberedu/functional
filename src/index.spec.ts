@@ -1,7 +1,7 @@
 import { fn } from './';
 
 describe('fn test', () => {
-	const props = ['Object', 'Array', 'Func'] as const;
+	const props = ['Object', 'Array', 'Func', 'Select'] as const;
 
 	props.forEach((prop) => {
 		test(`fn.${prop} should be defined`, () => {
