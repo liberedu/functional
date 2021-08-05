@@ -1,4 +1,5 @@
 export * from './entries';
+export * from './flat';
 export * from './init';
 export * from './is-empty';
 export * from './keys';

@@ -1,7 +1,4 @@
-type Str<S> = Extract<S, string>;
-export type Prepend<S, Key extends string, JoinKey extends string> = {
-	[K in keyof S as `${Key}${JoinKey}${Str<keyof S>}`]: S[K];
-};
+import { Prepend } from '../../helpers/types/prepend';
 
 const prependFn = <Src extends { [K in string]: any }, K extends string, JoinKey extends string = '.'>(
 	key: K,

@@ -1,19 +1,23 @@
 {
 	"compilerOptions": {
-		"declaration": true,
-		"module": "CommonJS",
-		"esModuleInterop": true,
+		"module": "commonjs",
+		"lib": ["es2017", "es7", "es6"],
 		"target": "ES5",
 		"moduleResolution": "node",
-		"sourceMap": true,
 		"outDir": "./dist",
-		"resolveJsonModule": true,
-		"allowSyntheticDefaultImports": true,
-		"skipLibCheck": true,
-		"strict": true,
 		"baseUrl": "./src",
 		"rootDir": "./src",
-		"paths": {}
+		"paths": {},
+		"declaration": true,
+		"strict": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"importHelpers": true,
+		"removeComments": false,
+		"noImplicitAny": false,
+		"strictNullChecks": true,
+		"skipLibCheck": true
 	},
 	"exclude": ["__tests__", "jest.config.ts", "dist", "**/*.spec.*"]
 }
