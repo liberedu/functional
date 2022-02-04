@@ -11,7 +11,7 @@ interface IGetArrayOfKeys {
 /**
  * Returns a string-array built where if a key is missing in the array, a type error will be shown
  */
-export const enumCheck: IGetArrayOfKeys = <K1 extends string>() => {
+export const makeCheck: IGetArrayOfKeys = <K1 extends string>() => {
 	return <K2 extends K1>(...keys: K2[]): Result<K1, K2> => {
 		return keys as any;
 	};
