@@ -10,3 +10,4 @@ export * from './pick';
 export { prepend } from './prepend';
 export * from './split';
 export * from './values';
+export { filter } from './filter';
