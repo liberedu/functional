@@ -1,45 +1,44 @@
 {
-  "name": "@liberedu/functional",
-  "version": "1.3.0",
-  "description": "",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist",
-  "scripts": {
-    "build": "yarn tsc",
-    "preconfigure": "node ./bin/pre-configure.js",
-    "preinstall": "yarn preconfigure",
-    "prebuild": "rm -rf ./dist",
-    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
-    "test:ci": "yarn test --coverage",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "echo tslint -p tsconfig.json",
-    "prepublishOnly": "yarn build && yarn preconfigure && npm run test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags",
-    "update:npm": "npm run version && npm publish"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/liberedu/functional.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/liberedu/functional/issues"
-  },
-  "homepage": "https://github.com/liberedu/functional#readme",
-  "devDependencies": {
-    "@types/jest": "^26.0.24",
-    "@types/ramda": "^0.27.44",
-    "jest": "^27.0.6",
-    "ts-jest": "^27.0.4",
-    "ts-node": "^10.1.0",
-    "tslib": "^2.3.0",
-    "typescript": "^4.3.5"
-  },
-  "dependencies": {
-    "ramda": "^0.27.1"
-  }
+	"name": "@liberedu/functional",
+	"version": "1.4.0",
+	"description": "",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist",
+	"scripts": {
+		"build": "yarn tsc",
+		"prebuild": "rm -rf ./dist",
+		"test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+		"test:ci": "yarn test --coverage",
+		"format": "yarn prettier --write \"src/**/*.ts\"",
+		"lint": "echo tslint -p tsconfig.json",
+		"prepublishOnly": "yarn build && yarn test && yarn lint",
+		"preversion": "yarn lint",
+		"version": "yarn format && git add -A src",
+		"postversion": "git push && git push --tags",
+		"update:npm": "yarn version && npm publish"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/liberedu/functional.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/liberedu/functional/issues"
+	},
+	"homepage": "https://github.com/liberedu/functional#readme",
+	"devDependencies": {
+		"@types/jest": "^26.0.24",
+		"@types/ramda": "^0.27.44",
+		"jest": "^27.0.6",
+		"prettier": "^2.6.1",
+		"ts-jest": "^27.0.4",
+		"ts-node": "^10.1.0",
+		"tslib": "^2.3.0",
+		"typescript": "^4.3.5"
+	},
+	"dependencies": {
+		"ramda": "^0.27.1"
+	}
 }
