@@ -1,5 +1,7 @@
 import { AttemptFn, ErrorHandler, WrapFnWithTryCatchModel } from '../types';
 
+type Awaited<R> = R extends Promise<infer T> ? Awaited<T> : R;
+
 type AsyncWrapModel<R> = {
 	promise: Promise<Awaited<R>>;
 	onError: ErrorHandler;
